@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            
+        }
+        #num1{
+            padding-block: 10px;
+            padding-inline-start: 10px;
+            border-color: aqua;
+            color: blue;
+            width: 70%;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+        #num2{
+            padding-block: 10px;
+            padding-inline-start: 10px;
+            border-color: aqua;
+            color: blue;
+            width: 70%;
+            outline: none;
+            border: none;
+            border-radius: 10px; 
+        }
+
+        .newb{
+            border: none;
+            border-radius: 10px;
+            width: 70%;
+            padding-block: 10px;
+            text-transform: capitalize;
+            cursor: pointer; 
+        }
+        .newb:hover{
+            color: white;
+            background-color: #777;
+        }
+            
+    </style>
+</head>
+<body>
+    <main>
+        <h1>BMI Converter</h1>
+        <input type="number" name="number" id="num1" min="1" placeholder="Insert a Number">
+        <input type="number" name="number" id="num2" min="1" max='50' placeholder="Insert a Number">
+        <button class="newb" type="submit">check BMI Result</button>
+
+        <section></section>
+    </body>
+    
+    
+
+    </main>
+    <script>
+        const button = document.querySelector('button')
+        const input = document.querySelectorAll('input')
+        const section = document.querySelector('section')
+        const paragraph = document.createElement('p')
+        const paragraph2 = document.createElement('p')
+        const paragraph3 = document.createElement('p')
+
+
+        button.addEventListener('click', BMIFinder)
+
+        function BMIFinder() {
+            section.append(paragraph, paragraph2, paragraph3)
+            const massValue =input[0].value
+            const HeightValue = input[1].value
+            let BMI = massValue / HeightValue **2;
+            let status
+            let content
+            // if (BMI < 18.5) {
+            //     status = 'Under-weight'
+            //     content= 'eat more food'
+            // }
+            // else if (BMI >= 18.5 && BMI < 24.5) {
+            //     status = 'healthy weight' 
+            //     content= 'keep the healthy live going'
+            // }
+            // else if (BMI > 24.5 && BMI < 24.5){
+            //     status = 'overweight'
+            //     content= 'need to hit the gym'
+            // }
+            // else{
+            //     status = 'obese'
+            //     content= 'needs surgery'
+            // }
+            status = (BMI < 18.5) ? 'Under-weight' : 
+            (BMI >= 18.5 && BMI < 24.5) ? 'healthy weight' : 
+            (BMI > 24.5 && BMI < 24.5) ? 'overweight' : 'obese'
+
+            content = (BMI < 18.5) ? 'eat more food' : 
+            (BMI >= 18.5 && BMI < 24.5) ? 'keep the healthy live going' : 
+            (BMI > 24.5 && BMI < 24.5) ? 'need to hit the gym' : 'needs surgery'
+            
+            paragraph.innerHTML = BMI.toFixed(2) + '<span> Kgm<sup>2</sup> </span>'
+            paragraph2.textContent = status
+            paragraph3.textContent = content
+document.activeElement
+        }
+
+        // alert(BMIFinder(4, 5))
+        
+    </script>
+</html>
