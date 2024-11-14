@@ -58,8 +58,8 @@
 <body>
     <main>
         <h1>BMI Converter</h1>
-        <input type="number" name="number" id="num1" min="1" placeholder="Insert a Number">
-        <input type="number" name="number" id="num2" min="1" max='50' placeholder="Insert a Number">
+        <input type="number" name="number" id="num1" min="1" placeholder="input your weight in KG">
+        <input type="number" name="number" id="num2" min="1" max='50' placeholder="Input your Height in Meter">
         <button class="newb" type="submit">check BMI Result</button>
 
         <section></section>
@@ -102,15 +102,15 @@
             //     status = 'obese'
             //     content= 'needs surgery'
             // }
-            status = (BMI < 18.5) ? 'Under-weight' : 
+            status = (BMI < 18.5) ? 'Underweight' : 
             (BMI >= 18.5 && BMI < 24.5) ? 'healthy weight' : 
-            (BMI > 24.5 && BMI < 24.5) ? 'overweight' : 'obese'
+            (BMI > 24.5 && BMI < 24.5) ? 'Overweight' : 'obese'
 
-            content = (BMI < 18.5) ? 'eat more food' : 
-            (BMI >= 18.5 && BMI < 24.5) ? 'keep the healthy live going' : 
-            (BMI > 24.5 && BMI < 24.5) ? 'need to hit the gym' : 'needs surgery'
+            content = (BMI < 18.5) ? 'Eat more food' : 
+            (BMI >= 18.5 && BMI < 24.5) ? 'Keep the healthy live going' : 
+            (BMI > 24.5 && BMI < 24.5) ? 'Need to hit the gym' : 'Needs surgery'
             
-            paragraph.innerHTML = BMI.toFixed(2) + '<span> Kgm<sup>2</sup> </span>'
+            paragraph.innerHTML = 'BMI result is: ' + BMI.toFixed(2) + '<span> Kgm<sup>-2</sup> </span>'
             paragraph2.textContent = status
             paragraph3.textContent = content
 
