@@ -8,4 +8,25 @@
 <body>
     
 </body>
+<script>
+    const person1 = {}
+    const person2 = Object()
+
+    person1.age = 55
+    person1['Full Name'] = 'Omotayo Alogba'
+    person1.occupation = 'Computer Programmer'
+    person1.likes = ['writing code', 'football', 'real estate']
+    person1[100] = 'my girl'
+
+    delete person1[100]
+
+    person1.readme = function () {
+        return 'Hello thanks for the message'
+    }
+
+    person1.nameKey = function(){
+        return ` my name is ${this['Full Name']} and i am ${this.age} and i like ${this.likes[Math.floor(Math.random()*this.likes.length)]}`
+    }
+    
+</script>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Simple Palindrome</h1>
+    <main>
+        <input type="text" placeholder="Insert a text or word" id="pal">
+
+    </main>
+    <p></p>
+    
+    
+</body>
+<script>
+    const input = document.querySelector('input')
+    const paragraph = document.querySelector('p')
+
+    input.addEventListener('input', palindrome)
+    function palindrome(){
+        const regex = /[a-z0-9]/ig
+        const string = input.value
+        const stringMatch = string.match(regex)
+        const stringReversed = string.match(regex).reverse()
+        textForPalindrome = stringMatch.join('') == stringReversed.join('') ? 'This is a palindrome': 'try again'
+
+        
+
+        paragraph.innerHTML =  textForPalindrome
+        
+    }
+</script>
+
+</html>

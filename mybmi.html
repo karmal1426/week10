@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="weightBMI" placeholder="What is your weight in kg" >
+    <input type="number" id="heightBMI" placeholder="What is your height in kg" >
+    <button >submit</button>
+    <section>
+
+    </section>
+</body>
+<script>
+    const input = document.querySelectorAll('input')
+    const button = document.querySelector('button')
+    button.addEventListener('click', functionBMI)
+    const section = document.querySelector('section')
+    const para = document.createElement('p')
+    const para2 = document.createElement('p')
+    const para3 = document.createElement('p')
+    
+    section.append(para, para2, para3)
+    
+    function functionBMI() {
+        let weight = input[0].value
+        let height = input[1].value
+        bMICalc = weight / height**2
+        bMICalc < 18.5 ? 'eat more food':
+        bMICalc >= 18.5 && bMICalc < 24.5 ? 'healthy life':
+        bMICalc <= 24.5 && bMICalc > 30 ? 'unhealthy life watch your weight': 'obese visit the doctor'
+
+        status = bMICalc < 18.5 ? 'eat more food':
+        bMICalc >= 18.5 && bMICalc < 24.5 ? 'healthy life':
+        bMICalc <= 24.5 && bMICalc > 30 ? 'unhealthy life watch your weight': 'obese visit the doctor'
+        
+        
+        para.innerHTML = `${bMICalc.tofixed(2)} in <span>kgm<sup>-2</sup></span>`
+    }
+    
+    
+
+</script>
+
+</html>

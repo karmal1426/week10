@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <section>
+
+    </section>
+    
+</body>
+<script>
+    list = document.querySelectorAll('ul li')
+    
+    list[1].innerHTML = `<a> href='https://instagram.com </a>'`
+    list[2].textContent = 'Lone wolf'
+    const section = document.querySelector('section')
+    const div = document.createElement('div')
+    section.append(div)
+    div.textContent = 'Thanks for adding me to the list'
+    
+
+    
+</script>
+</html>

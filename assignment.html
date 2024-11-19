@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Product(id, name, category, price, description, imageUrl, rating, stock, brand) {
+    this.id = id;
+    this.name = name;
+    this.category = category;
+    this.price = price;
+    this.description = description;
+    this.imageUrl = imageUrl;
+    this.rating = rating;
+    this.stock = stock;
+    this.brand = brand;
+}
+
+    const products = [
+    new Product(
+        1, 
+        "Organic Apples", 
+        "Fruits", 
+        3.99, 
+        "Fresh and juicy organic apples.", 
+        "https://images.pexels.com/photos/8805439/pexels-photo-8805439.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.5, 
+        120, 
+        "Nature's Best"
+    ),
+    new Product(
+        2, 
+        "Bananas", 
+        "Fruits", 
+        0.99, 
+        "Ripe and ready-to-eat bananas.", 
+        "https://images.pexels.com/photos/47305/bananas-banana-shrub-fruits-yellow-47305.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.6, 
+        200, 
+        "Tropical Farms"
+    ),
+    new Product(
+        3, 
+        "Almond Milk", 
+        "Dairy Alternatives", 
+        4.49, 
+        "Creamy almond milk, unsweetened.", 
+        "https://images.pexels.com/photos/3735169/pexels-photo-3735169.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.2, 
+        50, 
+        "Silky Dairy"
+    ),
+    new Product(
+        4, 
+        "Whole Wheat Bread", 
+        "Bakery", 
+        2.99, 
+        "Healthy whole wheat bread loaf.", 
+        "https://media.istockphoto.com/id/157587362/photo/detailed-close-up-of-sliced-grain-bread-on-white-background.jpg?s=1024x1024&w=is&k=20&c=LHlaahPw6uzsMcirckGi-pX2IGCth8ZgN3fi3zr6ZMk=", 
+        4.3, 
+        80, 
+        "Bakery Fresh"
+    ),
+    new Product(
+        5, 
+        "Brown Rice", 
+        "Grains", 
+        5.99, 
+        "High-quality long-grain brown rice.", 
+        "https://images.pexels.com/photos/4110253/pexels-photo-4110253.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.4, 
+        150, 
+        "GrainHouse"
+    ),
+    new Product(
+        6, 
+        "Peanut Butter", 
+        "Spreads", 
+        3.49, 
+        "Creamy peanut butter with no added sugar.", 
+        "https://images.pexels.com/photos/6659904/pexels-photo-6659904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.7, 
+        70, 
+        "Nutty Delights"
+    ),
+    new Product(
+        7, 
+        "Greek Yogurt", 
+        "Dairy", 
+        4.99, 
+        "Rich and creamy plain Greek yogurt.", 
+        "https://media.istockphoto.com/id/1222178456/photo/healthy-breakfast-with-fresh-greek-yogurt-on-background.jpg?s=1024x1024&w=is&k=20&c=hqF9BEQKXLCu8i8i5Y0YgqCoy8cCVo_JaL0fYz3f534=", 
+        4.5, 
+        60, 
+        "Creamy Delights"
+    ),
+    new Product(
+        8, 
+        "Chicken Breast", 
+        "Meat", 
+        7.99, 
+        "Boneless and skinless chicken breast.", 
+        "https://media.istockphoto.com/id/93456470/photo/two-raw-chicken-breast-on-white-backdrop.jpg?s=1024x1024&w=is&k=20&c=wTQOYiKMbRUqzOsa-bWjSU39u6jqhMGqo8oKFYSBMiA=", 
+        4.8, 
+        40, 
+        "Farm Fresh"
+    ),
+    new Product(
+        9, 
+        "Salmon Fillet", 
+        "Seafood", 
+        12.99, 
+        "Fresh Atlantic salmon fillet.", 
+        "https://images.pexels.com/photos/3029526/pexels-photo-3029526.jpeg?auto=compress&cs=tinysrgb&w=1200", 
+        4.9, 
+        30, 
+        "Ocean Harvest"
+    ),
+    new Product(
+        10, 
+        "Baby Spinach", 
+        "Vegetables", 
+        2.49, 
+        "Fresh and tender baby spinach leaves.", 
+        "https://media.istockphoto.com/id/144280328/photo/baby-spinach.jpg?s=1024x1024&w=is&k=20&c=KCLKKO-PHXeA6EUIxWig7hBbmgtBRCTluH3c8BSg6LE=", 
+        4.4, 
+        100, 
+        "GreenGoodness"
+    ),
+    new Product(
+        11, 
+        "Avocado", 
+        "Fruits", 
+        1.49, 
+        "Creamy Hass avocados.", 
+        "https://images.pexels.com/photos/557659/pexels-photo-557659.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.5, 
+        120, 
+        "Tropical Harvest"
+    ),
+    new Product(
+        12, 
+        "Cheddar Cheese", 
+        "Dairy", 
+        6.99, 
+        "Sharp and tangy aged cheddar cheese.", 
+        "https://media.istockphoto.com/id/155130498/photo/block-of-cheddar-cheese.jpg?s=1024x1024&w=is&k=20&c=5r-M7FHN73u5A6x9y-2pV5aS-2X6pbKAS2Y1h0GjuK4=", 
+        4.7, 
+        50, 
+        "Cheese Haven"
+    ),
+    new Product(
+        13, 
+        "Honey", 
+        "Sweeteners", 
+        7.49, 
+        "Pure organic honey.", 
+        "https://images.pexels.com/photos/33260/honey-sweet-syrup-organic.jpg?auto=compress&cs=tinysrgb&w=1200", 
+        4.8, 
+        45, 
+        "Golden Nectar"
+    ),
+    new Product(
+        14, 
+        "Eggs", 
+        "Dairy", 
+        2.99, 
+        "Free-range large eggs (dozen).", 
+        "https://images.pexels.com/photos/162712/egg-white-food-protein-162712.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.6, 
+        200, 
+        "Happy Hens"
+    ),
+    new Product(
+        15, 
+        "Carrots", 
+        "Vegetables", 
+        1.99, 
+        "Fresh and crunchy organic carrots.", 
+        "https://images.pexels.com/photos/143133/pexels-photo-143133.jpeg?auto=compress&cs=tinysrgb&w=1200", 
+        4.3, 
+        150, 
+        "Green Valley"
+    ),
+    new Product(
+        16, 
+        "Tomatoes", 
+        "Vegetables", 
+        2.49, 
+        "Juicy and ripe vine tomatoes.", 
+        "https://images.pexels.com/photos/533280/pexels-photo-533280.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.2, 
+        140, 
+        "Harvest Home"
+    ),
+    new Product(
+        17, 
+        "Orange Juice", 
+        "Beverages", 
+        3.99, 
+        "100% pure orange juice with no added sugar.", 
+        "https://media.istockphoto.com/id/537837754/photo/orange-juice-splash.jpg?s=1024x1024&w=is&k=20&c=WHilcE91rcqrxGwK6Ra6Pz2exn9OF_DmLAYmHJ7QVlI=", 
+        4.6, 
+        90, 
+        "Citrus Fresh"
+    ),
+    new Product(
+        18, 
+        "Almonds", 
+        "Nuts", 
+        9.99, 
+        "Raw and unsalted whole almonds.", 
+        "https://images.pexels.com/photos/3997459/pexels-photo-3997459.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.7, 
+        75, 
+        "Healthy Nibbles"
+    ),
+    new Product(
+        19, 
+        "Dark Chocolate", 
+        "Snacks", 
+        3.49, 
+        "70% dark chocolate bar.", 
+        "https://images.pexels.com/photos/7538069/pexels-photo-7538069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.8, 
+        100, 
+        "SweetBites"
+    ),
+    new Product(
+        20, 
+        "Potatoes", 
+        "Vegetables", 
+        2.99, 
+        "Fresh and firm potatoes, perfect for mashing or roasting.", 
+        "https://images.pexels.com/photos/2255935/pexels-photo-2255935.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2", 
+        4.5, 
+        180, 
+        "Rootly"
+    )
+];
+
+console.log(products);
+</script>
+</html>

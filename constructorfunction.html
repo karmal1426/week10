@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function Artist(name, job, nationality, age, biodata, travel){
+        this.name = name
+        this.job = job
+        this.nationality = nationality
+        this.age = age
+        this.biodata = biodata
+        this.travel = function(location){
+            country = this.nationality
+            return country == this.nationality ? `${this.name} is in ${this.nationality}`:
+            `contact ${this.name} yourself to confirm his whereabout`
+        }
+    
+    }
+
+    let newArtist = new Artist ('burnaboy', ['singer', 'songwriter', 'producer'], 'Nigeria', 32, ['Country is Nigeria', 'lives in ikoyi', ] )
+    let newArtist2 = new Artist ('Wizkid', ['singer', 'songwriter', 'producer'],'egypt', 32, ['Country is Nigeria', 'lives in ikoyi', ] )
+</script>
+</html>
